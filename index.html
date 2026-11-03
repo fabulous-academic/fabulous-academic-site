@@ -19,6 +19,48 @@ section{padding:70px 0}.alt-bg{background:#fff}.section-head{text-align:center;m
 footer{background:var(--navy);color:#dbe5fa;padding:42px 0 22px}.foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}.foot h3{color:white;margin-top:0}.foot p,.foot a{color:#b8c7e2;font-size:14px}.copyright{border-top:1px solid rgba(255,255,255,.15);margin-top:28px;padding-top:17px;color:#9fb1d1;font-size:12px}
 @media(max-width:850px){nav{display:none;position:absolute;top:76px;left:0;right:0;background:white;padding:18px 4%;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.nav.open nav{display:flex}.menu{display:block}.hero-grid{grid-template-columns:1fr}.faculty-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cards{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.faculty-leaders,.faculty-grid,.cards{grid-template-columns:1fr}.teacher-photo{height:290px}.leader-card .teacher-photo{height:310px}.hero{padding:52px 0}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.pdf-row{align-items:flex-start;flex-direction:column}}
+#students {
+  padding: 70px 0;
+  background: #f8faff;
+}
+
+.students-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.student-photo {
+  overflow: hidden;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.10);
+}
+
+.student-photo img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.student-photo:hover img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .students-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .student-photo img {
+    height: auto;
+    max-height: 350px;
+    object-fit: contain;
+  }
+}
 </style></head><body>
 <header><div class="wrap nav" id="nav"><a class="brand" href="#home" style="display:flex;align-items:center;gap:10px">
 <img src="assets/logo.png.png" alt="Logo" style="width:54px;height:54px;object-fit:contain">
@@ -27,6 +69,27 @@ footer{background:var(--navy);color:#dbe5fa;padding:42px 0 22px}.foot{display:fl
 <main>
 <section class="hero" id="home"><div class="wrap hero-grid"><div><span class="eyebrow">HSC • LEARN • PRACTISE • SUCCEED</span><h1>Build Your Future<br>with <span>Confidence.</span></h1><p>Welcome to Fabulous Academic And Admission Care. Learn smarter with structured lessons, practice MCQs, study notes and experienced academic guidance.</p><div class="actions"><a class="btn" href="#admission">Apply for Admission →</a><a class="btn alt" href="#teachers">Meet Our Teachers</a><a class="btn alt" href="tel:01352205074">Call Now</a></div></div><div class="hero-card"><span class="eyebrow">YOUR LEARNING SPACE</span><h3>Learn. Practise. Improve.</h3><p>একটি গুছানো learning platform—HSC শিক্ষার্থীদের নিয়মিত পড়াশোনার সহায়ক।</p><p><b>Experienced Teachers • Supportive Learning • Academic Guidance</b></p></div></div></section>
 <section class="alt-bg" id="about"><div class="wrap"><div class="section-head"><span class="tag">About our institute</span><h2>Fabulous Academic And Admission Care</h2><p>শিক্ষার্থীদের একাডেমিক উন্নয়ন, ইংরেজি বিষয়ে দক্ষতা এবং ভর্তি প্রস্তুতিতে সহায়তা করাই আমাদের লক্ষ্য।</p></div><div class="cards"><article class="card"><div class="icon">🎯</div><h3>Our Mission</h3><p>সহজবোধ্য পাঠদান, নিয়মিত অনুশীলন এবং পরিকল্পিত প্রস্তুতির মাধ্যমে শিক্ষার্থীদের আত্মবিশ্বাস বাড়ানো।</p></article><article class="card"><div class="icon">📚</div><h3>Academic Support</h3><p>HSC English ও প্রয়োজনীয় academic subjects নিয়ে গুছানো শেখার পরিবেশ।</p></article><article class="card"><div class="icon">🤝</div><h3>Student Guidance</h3><p>কোর্স, ক্লাস ও ভর্তি সংক্রান্ত তথ্যের জন্য সরাসরি যোগাযোগের সুযোগ।</p></article></div></div></section>
+<section id="students">
+<div class="wrap">
+<div class="section-head">
+<span class="tag">Our Memories</span>
+<h2>Our Students & Memories</h2>
+<p>আমাদের প্রিয় শিক্ষার্থীদের সঙ্গে কাটানো কিছু সুন্দর মুহূর্ত।</p>
+</div>
+
+<div class="students-gallery">
+<div class="student-photo">
+<img src="assets/students-1.jpg" alt="Our Students Group Photo">
+</div>
+<div class="student-photo">
+<img src="assets/students-2.jpg" alt="Our Students Group Photo">
+</div>
+<div class="student-photo">
+<img src="assets/students-3.jpg" alt="Our Students Group Photo">
+</div>
+</div>
+</div>
+</section>
 <section id="teachers"><div class="wrap"><div class="section-head"><span class="tag">Meet our team</span><h2>Our Expert Faculty</h2><p>অভিজ্ঞ ও দক্ষ শিক্ষকমণ্ডলীর তত্ত্বাবধানে মানসম্মত পাঠদান।</p></div>
 <div class="faculty-leaders">
 <article class="teacher-card leader-card"><div class="teacher-photo"><img src="assets/rakib-hasan.jpg" alt="Rakib Hasan"></div><div class="teacher-info"><h3>Rakib Hasan</h3><span class="role">Chairman</span><div class="detail"><b>Teaching Subject:</b> English</div><div class="detail"><b>Academic Background:</b> MA in English, MBSTU</div><span class="experience">★ 5 Years Experience</span></div></article>
