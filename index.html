@@ -61,6 +61,77 @@ footer{background:var(--navy);color:#dbe5fa;padding:42px 0 22px}.foot{display:fl
     object-fit: contain;
   }
 }
+  
+.fa-courses {
+  --navy:#1b3b7b;
+  --brown:#7b4a22;
+  --cream:#fbf6ee;
+  --sun:#f2b705;
+  --sky:#e8f0fb;
+  --ink:#1d2433;
+  font-family:"Hind Siliguri","Noto Sans Bengali",system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--cream);
+  padding:56px 16px;
+  box-sizing:border-box;
+}
+.fa-courses * { box-sizing:border-box; }
+.fa-wrap { max-width:900px; margin:0 auto; }
+.fa-courses h2 {
+  margin:0 0 6px;
+  font-size:clamp(1.6rem,5vw,2.3rem);
+  color:var(--navy);
+  line-height:1.25;
+}
+.fa-lead { margin:0 0 22px; color:#4a5365; font-size:1.05rem; }
+.fa-free {
+  display:flex; gap:12px; align-items:center;
+  background:var(--navy); color:#fff;
+  border-radius:14px; padding:14px 18px; margin-bottom:18px;
+}
+.fa-free b { color:var(--sun); font-size:1.15rem; }
+.fa-free span { font-size:1rem; line-height:1.4; }
+.fa-depts { margin:0 0 18px; font-size:.98rem; color:var(--brown); font-weight:500; }
+.fa-offer {
+  display:flex; gap:10px; align-items:center;
+  background:#fff6d6; border:1.5px solid var(--sun);
+  border-radius:12px; padding:12px 16px;
+  margin-bottom:22px; cursor:pointer; font-size:1rem;
+}
+.fa-offer input { width:22px; height:22px; accent-color:var(--navy); flex:none; }
+.fa-offer em { font-style:normal; font-weight:700; color:#b3261e; }
+.fa-list { list-style:none; margin:0; padding:0; border-top:2px solid var(--navy); }
+.fa-row {
+  display:grid; grid-template-columns:110px 1fr auto;
+  gap:8px 18px; align-items:center;
+  padding:18px 4px; border-bottom:1px solid #dcd3c3;
+}
+.fa-batch { background:var(--navy); color:#fff; border-radius:999px; padding:6px 0; text-align:center; font-weight:700; }
+.fa-row:nth-child(even) .fa-batch { background:var(--brown); }
+.fa-subs { display:flex; flex-wrap:wrap; gap:6px; }
+.fa-subs i { font-style:normal; background:var(--sky); border-radius:8px; padding:3px 10px; font-size:.95rem; }
+.fa-note { grid-column:2/3; margin:2px 0 0; font-size:.9rem; color:var(--brown); font-weight:500; }
+.fa-fee { text-align:right; line-height:1.15; }
+.fa-fee strong { display:block; font-size:1.7rem; color:var(--navy); }
+.fa-fee small { color:#5d6577; font-size:.85rem; }
+.fa-fee s { display:none; color:#8a8f9c; font-size:.95rem; }
+.fa-courses.has-disc .fa-fee s { display:block; }
+.fa-courses.has-disc .fa-fee strong { color:#1c7a3d; }
+.fa-row.fa-best { background:#fff; border-radius:12px; outline:2px solid var(--sun); outline-offset:-2px; }
+.fa-cta { display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; }
+.fa-cta a {
+  flex:1 1 200px; text-align:center; text-decoration:none;
+  font-weight:700; padding:14px 18px; border-radius:12px; font-size:1.05rem;
+}
+.fa-call { background:var(--sun); color:#1d2433; }
+.fa-wa { background:#1c7a3d; color:#fff; }
+.fa-cta a:focus-visible,.fa-offer:focus-within { outline:3px solid var(--navy); outline-offset:2px; }
+@media (max-width:620px) {
+  .fa-row { grid-template-columns:1fr auto; padding:16px 8px; }
+  .fa-batch { grid-column:1/2; justify-self:start; padding:4px 18px; }
+  .fa-fee { grid-column:2/3; grid-row:1/2; }
+  .fa-subs,.fa-note { grid-column:1/-1; }
+}
 </style></head><body>
 <header><div class="wrap nav" id="nav"><a class="brand" href="#home" style="display:flex;align-items:center;gap:10px">
 <img src="assets/logo.png.png" alt="Logo" style="width:54px;height:54px;object-fit:contain">
@@ -69,7 +140,82 @@ footer{background:var(--navy);color:#dbe5fa;padding:42px 0 22px}.foot{display:fl
 <main>
 <section class="hero" id="home"><div class="wrap hero-grid"><div><span class="eyebrow">HSC • LEARN • PRACTISE • SUCCEED</span><h1>Build Your Future<br>with <span>Confidence.</span></h1><p>Welcome to Fabulous Academic And Admission Care. Learn smarter with structured lessons, practice MCQs, study notes and experienced academic guidance.</p><div class="actions"><a class="btn" href="#admission">Apply for Admission →</a><a class="btn alt" href="#teachers">Meet Our Teachers</a><a class="btn alt" href="tel:01352205074">Call Now</a></div></div><div class="hero-card"><span class="eyebrow">YOUR LEARNING SPACE</span><h3>Learn. Practise. Improve.</h3><p>একটি গুছানো learning platform—HSC শিক্ষার্থীদের নিয়মিত পড়াশোনার সহায়ক।</p><p><b>Experienced Teachers • Supportive Learning • Academic Guidance</b></p></div></div></section>
 <section class="alt-bg" id="about"><div class="wrap"><div class="section-head"><span class="tag">About our institute</span><h2>Fabulous Academic And Admission Care</h2><p>শিক্ষার্থীদের একাডেমিক উন্নয়ন, ইংরেজি বিষয়ে দক্ষতা এবং ভর্তি প্রস্তুতিতে সহায়তা করাই আমাদের লক্ষ্য।</p></div><div class="cards"><article class="card"><div class="icon">🎯</div><h3>Our Mission</h3><p>সহজবোধ্য পাঠদান, নিয়মিত অনুশীলন এবং পরিকল্পিত প্রস্তুতির মাধ্যমে শিক্ষার্থীদের আত্মবিশ্বাস বাড়ানো।</p></article><article class="card"><div class="icon">📚</div><h3>Academic Support</h3><p>HSC English ও প্রয়োজনীয় academic subjects নিয়ে গুছানো শেখার পরিবেশ।</p></article><article class="card"><div class="icon">🤝</div><h3>Student Guidance</h3><p>কোর্স, ক্লাস ও ভর্তি সংক্রান্ত তথ্যের জন্য সরাসরি যোগাযোগের সুযোগ।</p></article></div></div></section>
-<section id="students">
+
+<section class="fa-courses" id="courses" aria-labelledby="fa-courses-title">
+  <div class="fa-wrap">
+    <h2 id="fa-courses-title">HSC ব্যাচ ও মাসিক টিউশন ফি</h2>
+    <p class="fa-lead">একাদশ ও দ্বাদশ শ্রেণির নতুন ব্যাচে ভর্তি চলছে।</p>
+
+    <div class="fa-free">
+      <b>২ দিন</b>
+      <span>ফ্রি ক্লাস করে দেখুন, পছন্দ হলে তারপর ভর্তি হন।</span>
+    </div>
+
+    <p class="fa-depts">বিভাগ: বিজ্ঞান, ব্যবসায় শিক্ষা, মানবিক</p>
+
+    <label class="fa-offer">
+      <input type="checkbox" id="fa-aplus">
+      <span>আমি SSC-তে A+ পেয়েছি: মাসিক ফিতে <em>১০% ছাড়</em> দেখুন</span>
+    </label>
+
+    <ol class="fa-list">
+      <li class="fa-row">
+        <span class="fa-batch">ব্যাচ-১</span>
+        <div class="fa-subs"><i>পদার্থ</i><i>রসায়ন</i><i>জীববিজ্ঞান</i><i>উচ্চতর গণিত</i></div>
+        <div class="fa-fee"><s data-fee="3200"></s><strong data-fee="3200">৳৩২০০</strong><small>প্রতি মাসে</small></div>
+      </li>
+      <li class="fa-row">
+        <span class="fa-batch">ব্যাচ-২</span>
+        <div class="fa-subs"><i>ইংরেজি</i><i>আইসিটি</i><i>বাংলা</i></div>
+        <div class="fa-fee"><s data-fee="2000"></s><strong data-fee="2000">৳২০০০</strong><small>প্রতি মাসে</small></div>
+      </li>
+      <li class="fa-row">
+        <span class="fa-batch">ব্যাচ-৩</span>
+        <div class="fa-subs"><i>পদার্থ</i><i>রসায়ন</i><i>জীববিজ্ঞান</i><i>উচ্চতর গণিত</i><i>ইংরেজি</i><i>আইসিটি</i><i>বাংলা</i></div>
+        <div class="fa-fee"><s data-fee="4500"></s><strong data-fee="4500">৳৪৫০০</strong><small>প্রতি মাসে</small></div>
+      </li>
+      <li class="fa-row">
+        <span class="fa-batch">ব্যাচ-৪</span>
+        <div class="fa-subs"><i>ইংরেজি</i><i>আইসিটি</i><i>হিসাববিজ্ঞান</i><i>বাংলা</i></div>
+        <div class="fa-fee"><s data-fee="2800"></s><strong data-fee="2800">৳২৮০০</strong><small>প্রতি মাসে</small></div>
+      </li>
+      <li class="fa-row">
+        <span class="fa-batch">ব্যাচ-৫</span>
+        <div class="fa-subs"><i>ইংরেজি</i><i>আইসিটি</i><i>অর্থনীতি</i><i>বাংলা</i></div>
+        <div class="fa-fee"><s data-fee="2800"></s><strong data-fee="2800">৳২৮০০</strong><small>প্রতি মাসে</small></div>
+      </li>
+    </ol>
+
+    <div class="fa-cta">
+      <a class="fa-call" href="tel:01352205074">ফোন করুন: ০১৩৫২-২০৫০৭৪</a>
+      <a class="fa-wa" href="https://wa.me/8801352205074">WhatsApp-এ মেসেজ করুন</a>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var root=document.getElementById('courses'),box=document.getElementById('fa-aplus');
+  var bn=function(n){
+    try{return n.toLocaleString('bn-BD',{useGrouping:false})}
+    catch(e){return String(n)}
+  };
+  function render(){
+    var on=box.checked;
+    root.classList.toggle('has-disc',on);
+    root.querySelectorAll('strong[data-fee]').forEach(function(el){
+      var f=+el.dataset.fee;
+      el.textContent='৳'+bn(on?Math.round(f*0.9):f);
+    });
+    root.querySelectorAll('s[data-fee]').forEach(function(el){
+      el.textContent='৳'+bn(+el.dataset.fee);
+    });
+  }
+  box.addEventListener('change',render);
+  render();
+})();
+</script>
+  <section id="students">
 <div class="wrap">
 <div class="section-head">
 <span class="tag">Our Memories</span>
