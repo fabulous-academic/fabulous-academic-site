@@ -222,37 +222,244 @@ section{scroll-margin-top:112px}.feature-strip{scroll-margin-top:112px}
 @media(max-width:820px){.topbar-inner{font-size:11px}.topbar-contact{gap:8px}.topbar-contact span:last-child{display:none}.nav{min-height:68px}.brand{font-size:14px}.brand img{width:49px;height:50px}.nav-cta{display:none}nav{display:none;position:absolute;top:68px;left:0;right:0;background:#fff;padding:15px 4%;flex-direction:column;align-items:stretch;box-shadow:0 10px 20px #092f6d22}.nav.open nav{display:flex}.menu{display:block}.exact-hero{height:auto;min-height:440px}.hero-backdrop{width:100%;opacity:.48}.hero-shade{background:linear-gradient(90deg,rgba(248,251,255,.98),rgba(242,248,255,.78))}.hero-copy{width:100%;max-width:620px}.feature-strip{grid-template-columns:repeat(2,1fr);gap:4px}.feature-item{border-right:0;border-bottom:1px solid #d6e4f8;padding:9px}.feature-item:last-child{grid-column:1/-1}.home-snapshot{grid-template-columns:1fr 1fr}.snapshot-card:last-child{grid-column:1/-1}}
 @media(max-width:560px){.topbar{height:auto;min-height:36px}.topbar-inner{height:auto;min-height:36px;gap:5px}.topbar-motto{font-size:11px}.topbar-contact{font-size:10px}.topbar-social{width:24px;height:24px}.brand{font-size:12px}.brand small{font-size:8px;letter-spacing:1.2px}.exact-hero{min-height:440px;padding:28px 0}.hero-copy{padding:0}.admission-pill{font-size:13px;padding:8px 15px}.exact-hero h1{font-size:39px;letter-spacing:-1px}.hero-slogan{font-size:15px!important}.exact-hero .hero-description{font-size:14px!important}.desktop-only{display:none}.exact-hero .actions{display:grid;grid-template-columns:1fr}.exact-hero .btn{width:100%}.feature-strip{width:92%;grid-template-columns:1fr 1fr;padding:8px}.feature-item{padding:8px 4px}.feature-icon{width:40px;height:40px;font-size:20px}.feature-item b{font-size:10px}.feature-item small{font-size:8px;white-space:normal}.home-snapshot{grid-template-columns:1fr;width:92%;gap:12px}.snapshot-card:last-child{grid-column:auto}.snapshot-teachers img{height:130px}.snapshot-gallery img{height:190px}.snapshot-fees{grid-template-columns:1.2fr .8fr}.snapshot-fees ul{font-size:12px}.discount{min-height:110px}}
 
-</style></head><body>
-<div class="topbar"><div class="topbar-inner wrap"><div class="topbar-motto">🎓 <em>Learn Today. Lead Tomorrow.</em></div><div class="topbar-contact"><a href="tel:01352205074">📞 <b>01352-205074</b></a><span class="top-sep">|</span><span>📍 C-72/5, Birulia Road, Savar, Dhaka</span></div><a class="topbar-social" href="https://www.facebook.com/share/19ZHBdpRdJ/" target="_blank" rel="noopener" aria-label="Facebook">f</a></div></div>
-<header><div class="wrap nav" id="nav"><a class="brand" href="#home"><img src="assets/logo.png.png" alt="Fabulous Academic logo"><span>FABULOUS ACADEMIC<small>AND ADMISSION CARE</small></span></a><nav><a class="active" href="#home">Home</a><a href="#about">About</a><a href="#teachers">Our Teachers</a><a href="#lessons">Grammar Lessons</a><a href="#notices">Notice</a><a href="#notes">PDF Notes</a><a href="#contact">Contact</a></nav><a class="nav-cta" href="#admission">🎓 Admission Open</a><button class="menu" aria-label="Open menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button></div></header>
+</style>
+<style>
+/* ===== Premium upgrade v2: icons, motion, mobile bar, form, routine, quiz, FAQ, map ===== */
+
+/* ---- line icons (replace emoji) ---- */
+.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none;vertical-align:-.14em}
+.topbar-motto,.topbar-contact a,.topbar-contact span{display:inline-flex;align-items:center;gap:7px}
+.topbar-motto .i{font-size:19px}
+.topbar-social .i{width:15px;height:15px;stroke-width:2.2}
+.nav-cta{gap:8px}.nav-cta .i{font-size:16px}
+.menu .i{width:22px;height:22px;vertical-align:middle}
+.admission-pill{display:inline-flex;align-items:center;gap:10px}.admission-pill .i{font-size:19px}
+.btn{gap:10px}.btn .i{font-size:1.1em}
+.feature-icon{transition:background .25s,color .25s,transform .25s}
+.feature-icon .i{width:30px;height:30px;stroke-width:1.8}
+.feature-item:hover .feature-icon{background:#0750b5;color:#fff;transform:scale(1.06)}
+.sh{display:inline-flex;align-items:center;gap:9px}.sh .i{font-size:18px}
+.snapshot-fees li{display:flex;align-items:center;gap:9px}
+.snapshot-fees li:first-letter{color:inherit}
+.snapshot-fees .ok{color:#00a76f;stroke-width:3;font-size:14px}
+.icon{display:grid;place-items:center;width:54px;height:54px;border-radius:15px;background:#e7f0ff;color:#0750b5}
+.icon .i{width:26px;height:26px;stroke-width:1.9;vertical-align:baseline}
+
+.experience{display:inline-flex;align-items:center;gap:6px}.experience .i{font-size:13px;fill:#ffc400;stroke:#ffc400;vertical-align:baseline}
+
+/* ---- gentle hover effects ---- */
+.card{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.card:hover{transform:translateY(-5px);box-shadow:0 22px 50px rgba(8,62,142,.14);border-color:#c9dbf7}
+.varsity-card{transition:transform .25s ease,background .25s ease}
+.varsity-card:hover{transform:translateY(-4px);background:rgba(255,255,255,.15)}
+.snapshot-card{transition:transform .25s ease,box-shadow .25s ease}
+.snapshot-card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(8,62,142,.16)}
+.notice,.pdf-row{transition:transform .2s ease,box-shadow .2s ease}
+.notice:hover,.pdf-row:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(8,62,142,.09)}
+.fa-cta a{transition:transform .2s ease,filter .2s ease}
+.fa-cta a:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.btn:active{transform:translateY(0);filter:none}
+
+/* ---- sticky call / WhatsApp bar (mobile only) ---- */
+.sticky-cta{display:none}
+@media(max-width:820px){
+  .sticky-cta{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-top:1px solid #d8e5fa;box-shadow:0 -8px 24px rgba(8,45,104,.12)}
+  .sticky-cta a{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 10px;border-radius:12px;font-weight:800;font-size:15px}
+  .sticky-cta .i{font-size:18px}
+  .sc-call{background:#ffc400;color:#062e68}
+  .sc-wa{background:#1c9d57;color:#fff}
+  body{padding-bottom:80px}
+}
+
+/* ---- navigation: switch to menu a little earlier because of the two new links ---- */
+@media(max-width:1100px){
+  nav{display:none;position:absolute;top:69px;left:0;right:0;background:#fff;padding:15px 4%;flex-direction:column;align-items:stretch;box-shadow:0 10px 20px #092f6d22}
+  .nav.open nav{display:flex}
+  .menu{display:block}
+}
+@media(min-width:1101px){nav{gap:0;font-size:12.5px}nav a{padding:10px 8px}.nav{gap:10px}.nav-cta{padding:11px 15px;font-size:12.5px}}
+
+/* ---- admission form ---- */
+.adm-grid{display:grid;grid-template-columns:1.35fr .9fr;gap:22px;align-items:start}
+.adm-form:hover{transform:none;box-shadow:var(--shadow);border-color:var(--line)}
+.adm-form h3{margin:0 0 4px;color:#073477;font-size:22px}
+.adm-form .sub{color:var(--muted);font-size:14px;margin:0 0 18px}
+.field label{line-height:1.4}
+.field input:focus,.field select:focus,.field textarea:focus{outline:0;border-color:#0750b5;box-shadow:0 0 0 3px rgba(7,80,181,.15)}
+.field input.bad,.field select.bad{border-color:#d32619;box-shadow:0 0 0 3px rgba(211,38,25,.12)}
+.field .req{color:#d32619}
+.check{display:flex!important;gap:10px;align-items:flex-start;font-size:14px;color:#334a72;cursor:pointer;font-weight:600!important}
+.check input{width:20px!important;height:20px;margin-top:2px;accent-color:#0750b5;flex:none;padding:0!important}
+.adm-err{color:#d32619;font-size:13px;min-height:20px;margin:10px 0 0;font-weight:700}
+.adm-submit{width:100%;margin-top:4px;background:#1c9d57;font-size:16px;padding:15px;box-shadow:0 10px 22px rgba(28,157,87,.22)}
+.adm-submit:disabled{opacity:.7;cursor:wait}
+.adm-side{display:grid;gap:14px}
+.perk{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:0 8px 22px rgba(8,62,142,.07)}
+.perk .icon{flex:none;width:46px;height:46px;border-radius:13px}.perk .icon .i{width:22px;height:22px}
+.perk b{display:block;color:#082d68}.perk p{margin:2px 0 0;font-size:13px;color:#536b91;line-height:1.5}
+.perk.gold{background:#fff7d6;border-color:#ffd54a}.perk.gold .icon{background:#ffe27a;color:#7a5200}
+.adm-contact{display:flex;gap:10px;flex-wrap:wrap}.adm-contact .btn{flex:1 1 170px}
+@media(max-width:900px){.adm-grid{grid-template-columns:1fr}}
+
+/* ---- class routine (day x time grids with batch tabs) ---- */
+.rt-tabs{display:none;gap:8px;flex-wrap:wrap;justify-content:center;margin:0 0 18px}
+.js-tabs .rt-tabs{display:flex}
+.rt-tab{border:1.5px solid #cfe0fa;background:#fff;color:#073477;font:inherit;font-weight:800;font-size:14px;padding:10px 18px;border-radius:999px;cursor:pointer;transition:background .2s,color .2s,border-color .2s,transform .2s}
+.rt-tab:hover{border-color:#0750b5;transform:translateY(-1px)}
+.rt-tab[aria-selected="true"]{background:#0750b5;border-color:#0750b5;color:#fff;box-shadow:0 8px 18px rgba(7,80,181,.22)}
+.rt-tab:focus-visible{outline:3px solid rgba(7,80,181,.35);outline-offset:2px}
+.rt-title{margin:0;padding:18px 18px 4px;color:#073477;font-size:19px}
+.js-tabs .rt-title{display:none}
+.js-tabs .rt-panel[hidden]{display:none}
+.routine-wrap{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
+.routine-scroll{overflow-x:auto}
+.rtt{width:100%;border-collapse:collapse;min-width:560px}
+.rtt caption{position:absolute;left:-9999px}
+.rtt thead th{background:#073477;color:#fff;padding:14px;font-size:13px;text-align:center;white-space:nowrap}
+.rtt thead th:first-child{text-align:left}
+.rtt tbody th{text-align:left;padding:14px;color:#073477;font-weight:900;font-size:14px;background:#f1f6ff;white-space:nowrap;border-top:1px solid var(--line)}
+.rtt td{padding:12px 10px;border-top:1px solid var(--line);border-left:1px solid var(--line);text-align:center;font-weight:700;color:#082d68;font-size:14px;vertical-align:middle}
+.rtt tbody tr:nth-child(even) td{background:#f9fbff}
+.rtt td.off{color:#a0aec3;font-weight:600}
+.rtt td.alt{background:#fff8dc!important}
+.alt-time{display:block;font-size:11px;font-weight:800;color:#8a6200;margin-bottom:2px}
+.rt-legend{display:flex;flex-wrap:wrap;gap:6px 20px;justify-content:center;font-size:13px;color:var(--muted);margin:16px 0 0}
+.rt-legend i{display:inline-block;width:12px;height:12px;border-radius:3px;background:#fff8dc;border:1px solid #f0d47a;vertical-align:-1px;margin-right:6px}
+.routine-note{text-align:center;color:var(--muted);font-size:13px;margin:10px 0 0}
+.routine-note a{color:#0750b5;text-decoration:underline}
+@media(max-width:640px){
+  .rtt{min-width:0}
+  .rtt thead{display:none}
+  .rtt,.rtt tbody,.rtt tr,.rtt th,.rtt td{display:block}
+  .rtt tbody tr{padding:12px 16px;border-top:1px solid var(--line)}
+  .rtt tbody tr:nth-child(even){background:#f7faff}
+  .rtt tbody tr:first-child{border-top:0}
+  .rtt tbody th{border:0;background:none;padding:0 0 6px;font-size:15px}
+  .rtt td{display:flex;gap:10px;border:0;padding:5px 0;text-align:left;background:none!important}
+  .rtt td:empty{display:none}
+  .rtt td::before{content:attr(data-label);flex:none;min-width:96px;color:#536b91;font-weight:800;font-size:13px}
+  .alt-time{display:none}
+  .rtt td.alt{background:none!important}
+}
+
+/* ---- interactive quiz ---- */
+.quiz2{max-width:760px;margin:auto;padding:28px}
+.qz-top{display:flex;align-items:center;gap:14px;margin-bottom:20px;font-size:13px;font-weight:800;color:#536b91;white-space:nowrap}
+.qz-bar{flex:1;height:8px;border-radius:8px;background:#e3ecfb;overflow:hidden}
+.qz-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#0750b5,#12b8c5);border-radius:8px;transition:width .45s ease}
+.qz-q{font-size:clamp(18px,3.4vw,22px);font-weight:850;color:#073477;line-height:1.55;margin:0 0 16px}
+.qz-blank{display:inline-block;min-width:84px;border-bottom:3px solid #ffc400;text-align:center;padding:0 6px;color:#0750b5}
+.qz-opts{display:grid;gap:10px}
+.qz-opt{display:flex;align-items:center;gap:12px;width:100%;text-align:left;border:1.5px solid #d8e5fa;background:#fff;border-radius:12px;padding:13px 14px;font:inherit;font-weight:700;color:#082d68;cursor:pointer;transition:border-color .18s,background .18s,transform .18s}
+.qz-opt:hover:not(:disabled){border-color:#0750b5;background:#f3f8ff;transform:translateX(3px)}
+.qz-opt:focus-visible{outline:3px solid rgba(7,80,181,.35);outline-offset:2px}
+.qz-opt .ltr{flex:none;width:28px;height:28px;border-radius:8px;background:#e7f0ff;color:#0750b5;display:grid;place-items:center;font-size:13px;font-weight:900}
+.qz-opt.correct{border-color:#1c9d57;background:#eaf8f0}.qz-opt.correct .ltr{background:#1c9d57;color:#fff}
+.qz-opt.wrong{border-color:#d32619;background:#fdeeec}.qz-opt.wrong .ltr{background:#d32619;color:#fff}
+.qz-opt:disabled{cursor:default}
+.qz-exp{margin-top:16px;padding:14px 16px;border-radius:12px;background:#f3f8ff;border-left:4px solid #0750b5;font-size:14.5px;color:#26416d;line-height:1.7}
+.qz-exp.ok{background:#eaf8f0;border-color:#1c9d57}.qz-exp.bad{background:#fdeeec;border-color:#d32619}
+.qz-exp b.v{display:block;margin-bottom:2px;color:#082d68}
+.qz-actions{display:flex;justify-content:flex-end;margin-top:16px}
+.qz-score{text-align:center}
+.qz-big{font-size:58px;font-weight:950;color:#073477;line-height:1;margin:6px 0}
+.qz-big small{font-size:24px;color:#536b91;font-weight:800}
+.qz-msg{color:#26416d;font-weight:700;margin:6px 0 18px}
+.qz-review{text-align:left;margin:18px 0 6px;border-top:1px solid var(--line);padding-top:14px}
+.qz-review h4{margin:0 0 10px;color:#073477}
+.qz-miss{padding:10px 12px;border-radius:10px;background:#fdf3f2;margin-bottom:8px;font-size:14px;color:#3a2a2a;line-height:1.6}
+.qz-miss b{color:#1c7a3d}.qz-miss s{color:#a33}
+.qz-end{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:16px}
+
+/* ---- FAQ ---- */
+.faq{max-width:820px;margin:auto;display:grid;gap:12px}
+.faq-item{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 6px 18px rgba(8,62,142,.06);overflow:hidden;transition:border-color .2s}
+.faq-item summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:17px 20px;font-weight:800;color:#082d68}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary:focus-visible{outline:3px solid rgba(7,80,181,.35);outline-offset:-3px}
+.faq-item summary .i{width:20px;height:20px;color:#0750b5;transition:transform .25s ease}
+.faq-item[open]{border-color:#bcd3f7}
+.faq-item[open] summary .i{transform:rotate(180deg)}
+.faq-item p{margin:0;padding:0 20px 18px;color:#44587d;font-size:15px;line-height:1.75}
+.faq-item p a{color:#0750b5;text-decoration:underline}
+
+/* ---- map + class timing ---- */
+.contact-extra{display:grid;grid-template-columns:1.5fr 1fr;gap:18px;margin-top:20px}
+.map-frame{border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);min-height:330px;background:#e7f0ff}
+.map-frame iframe{display:block;width:100%;height:100%;min-height:330px;border:0}
+.time-card{display:flex;flex-direction:column;align-items:flex-start}
+.time-card .btn{margin-top:6px}
+.time-card .btn+.btn{margin-top:10px}
+@media(max-width:820px){.contact-extra{grid-template-columns:1fr}.map-frame,.map-frame iframe{min-height:280px}}
+
+/* ---- scroll reveal (added by script; elements stay visible if JS is off) ---- */
+.reveal{opacity:0;translate:0 22px;transition:opacity .7s ease,translate .7s ease}
+.reveal.in{opacity:1;translate:0 0}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1!important;translate:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .card:hover,.snapshot-card:hover,.varsity-card:hover,.qz-opt:hover:not(:disabled){transform:none}
+}
+
+</style>
+</head><body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<symbol id="i-cap" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+<symbol id="i-megaphone" viewBox="0 0 24 24"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></symbol>
+<symbol id="i-landmark" viewBox="0 0 24 24"><path d="M3 22h18"/><path d="M6 18v-7M10 18v-7M14 18v-7M18 18v-7"/><path d="M12 2 20 7H4z"/></symbol>
+<symbol id="i-steth" viewBox="0 0 24 24"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6 6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v1a6 6 0 0 0 6 6 6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+<symbol id="i-trend" viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+<symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+<symbol id="i-books" viewBox="0 0 24 24"><path d="m16 6 4 14"/><path d="M12 6v14"/><path d="M8 8v12"/><path d="M4 4v16"/></symbol>
+<symbol id="i-usercheck" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></symbol>
+<symbol id="i-fb" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 12h16M4 6h16M4 18h16"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+<symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></symbol>
+<symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></symbol>
+<symbol id="i-percent" viewBox="0 0 24 24"><path d="M19 5 5 19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></symbol>
+<symbol id="i-nav" viewBox="0 0 24 24"><polygon points="3 11 22 2 13 21 11 13 3 11"/></symbol>
+</defs></svg>
+
+<div class="topbar"><div class="topbar-inner wrap"><div class="topbar-motto"><svg class="i" aria-hidden="true"><use href="#i-cap"/></svg> <em>Learn Today. Lead Tomorrow.</em></div><div class="topbar-contact"><a href="tel:01352205074"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg> <b>01352-205074</b></a><span class="top-sep">|</span><span><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg> C-72/5, Birulia Road, Savar, Dhaka</span></div><a class="topbar-social" href="https://www.facebook.com/share/19ZHBdpRdJ/" target="_blank" rel="noopener" aria-label="Facebook"><svg class="i" aria-hidden="true"><use href="#i-fb"/></svg></a></div></div>
+<header><div class="wrap nav" id="nav"><a class="brand" href="#home"><img src="assets/logo.png.png" alt="Fabulous Academic logo"><span>FABULOUS ACADEMIC<small>AND ADMISSION CARE</small></span></a><nav><a class="active" href="#home">Home</a><a href="#about">About</a><a href="#teachers">Teachers</a><a href="#routine">Routine</a><a href="#lessons">Grammar</a><a href="#notices">Notice</a><a href="#notes">PDF Notes</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav><a class="nav-cta" href="#admission"><svg class="i" aria-hidden="true"><use href="#i-cap"/></svg> Admission Open</a><button class="menu" aria-label="Open menu" onclick="document.getElementById('nav').classList.toggle('open')"><svg class="i" aria-hidden="true"><use href="#i-menu"/></svg></button></div></header>
 <main>
 <section class="hero exact-hero" id="home">
   <img class="hero-backdrop" src="assets/students-5.jpg" alt="Fabulous Academic students" fetchpriority="high">
   <div class="hero-shade"></div>
   <div class="wrap hero-content">
     <div class="hero-copy">
-      <span class="admission-pill">📣 &nbsp; ADMISSION OPEN</span>
+      <span class="admission-pill"><svg class="i" aria-hidden="true"><use href="#i-megaphone"/></svg> ADMISSION OPEN</span>
       <h1>FABULOUS ACADEMIC<br><span>And Admission Care</span></h1>
       <p class="hero-slogan">Your Destination for Academic Excellence &amp; Admission Success.</p>
       <div class="slogan-underline"></div>
       <p class="hero-description">HSC Academic Coaching, University Admission Preparation<br class="desktop-only"> and Nursing Admission Guidance — All Under One Roof.</p>
-      <div class="actions"><a class="btn hero-blue" href="#courses">📖 &nbsp; Explore Courses &nbsp; →</a><a class="btn hero-gold" href="#admission">📞 &nbsp; Apply for Admission</a></div>
+      <div class="actions"><a class="btn hero-blue" href="#courses"><svg class="i" aria-hidden="true"><use href="#i-book"/></svg> Explore Courses <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn hero-gold" href="#admission"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg> Apply for Admission</a></div>
     </div>
   </div>
 </section>
 <section class="feature-strip wrap" aria-label="Our coaching services">
-  <a class="feature-item" href="#courses"><span class="feature-icon">🎓</span><span><b>HSC Academic<br>Coaching</b><small>Build a Strong Foundation</small></span></a>
-  <a class="feature-item" href="#varsity"><span class="feature-icon">🏛️</span><span><b>University Admission<br>Preparation</b><small>DU, JU, GST, RU, CU</small></span></a>
-  <a class="feature-item" href="#varsity"><span class="feature-icon">🩺</span><span><b>Nursing Admission<br>Preparation</b><small>Your Care, Our Priority</small></span></a>
-  <a class="feature-item" href="#teachers"><span class="feature-icon">👥</span><span><b>Experienced<br>Teachers</b><small>Learn from the Best</small></span></a>
-  <a class="feature-item" href="#exam"><span class="feature-icon">📈</span><span><b>Regular Exams &amp;<br>Academic Guidance</b><small>Track Your Progress</small></span></a>
+  <a class="feature-item" href="#courses"><span class="feature-icon"><svg class="i" aria-hidden="true"><use href="#i-cap"/></svg></span><span><b>HSC Academic<br>Coaching</b><small>Build a Strong Foundation</small></span></a>
+  <a class="feature-item" href="#varsity"><span class="feature-icon"><svg class="i" aria-hidden="true"><use href="#i-landmark"/></svg></span><span><b>University Admission<br>Preparation</b><small>DU, JU, GST, RU, CU</small></span></a>
+  <a class="feature-item" href="#varsity"><span class="feature-icon"><svg class="i" aria-hidden="true"><use href="#i-steth"/></svg></span><span><b>Nursing Admission<br>Preparation</b><small>Your Care, Our Priority</small></span></a>
+  <a class="feature-item" href="#teachers"><span class="feature-icon"><svg class="i" aria-hidden="true"><use href="#i-users"/></svg></span><span><b>Experienced<br>Teachers</b><small>Learn from the Best</small></span></a>
+  <a class="feature-item" href="#exam"><span class="feature-icon"><svg class="i" aria-hidden="true"><use href="#i-trend"/></svg></span><span><b>Regular Exams &amp;<br>Academic Guidance</b><small>Track Your Progress</small></span></a>
 </section>
 <section class="home-snapshot wrap" aria-label="Explore our institute">
-  <article class="snapshot-card"><div class="snapshot-head"><span>👥 &nbsp; Our Teachers</span><a href="#teachers">View All →</a></div><div class="snapshot-teachers"><img src="assets/rakib-hasan.jpg" alt="Rakib Hasan"><img src="assets/nirob-mahmud.jpg" alt="Nirob Mahmud"><img src="assets/abid-hasan.jpg" alt="Mohammad Abid Hasan"></div></article>
-  <article class="snapshot-card"><div class="snapshot-head"><span>⭐ &nbsp; Our Students &amp; Memories</span><a href="#students">View All →</a></div><a class="snapshot-gallery" href="#students"><img src="assets/students-3.jpg" alt="Our students at Fabulous Academic"></a></article>
-  <article class="snapshot-card"><div class="snapshot-head"><span>📖 &nbsp; HSC Courses &amp; Monthly Fees</span><a href="#courses">View All →</a></div><div class="snapshot-fees"><ul><li>✔ &nbsp; Batch-1: ৳3,200</li><li>✔ &nbsp; Batch-2: ৳2,000</li><li>✔ &nbsp; Batch-3: ৳4,500</li><li>✔ &nbsp; Batch-4: ৳2,800</li><li>✔ &nbsp; Batch-5: ৳2,800</li></ul><div class="discount"><b>SSC A+</b><strong>Students Get</strong><b>10% Discount</b></div></div></article>
+  <article class="snapshot-card"><div class="snapshot-head"><span class="sh"><svg class="i" aria-hidden="true"><use href="#i-users"/></svg> Our Teachers</span><a href="#teachers">View All →</a></div><div class="snapshot-teachers"><img src="assets/rakib-hasan.jpg" alt="Rakib Hasan"><img src="assets/nirob-mahmud.jpg" alt="Nirob Mahmud"><img src="assets/abid-hasan.jpg" alt="Mohammad Abid Hasan"></div></article>
+  <article class="snapshot-card"><div class="snapshot-head"><span class="sh"><svg class="i" aria-hidden="true"><use href="#i-star"/></svg> Our Students &amp; Memories</span><a href="#students">View All →</a></div><a class="snapshot-gallery" href="#students"><img src="assets/students-3.jpg" alt="Our students at Fabulous Academic"></a></article>
+  <article class="snapshot-card"><div class="snapshot-head"><span class="sh"><svg class="i" aria-hidden="true"><use href="#i-book"/></svg> HSC Courses &amp; Monthly Fees</span><a href="#courses">View All →</a></div><div class="snapshot-fees"><ul><li><svg class="i ok" aria-hidden="true"><use href="#i-check"/></svg> Batch-1: ৳3,200</li><li><svg class="i ok" aria-hidden="true"><use href="#i-check"/></svg> Batch-2: ৳2,000</li><li><svg class="i ok" aria-hidden="true"><use href="#i-check"/></svg> Batch-3: ৳4,500</li><li><svg class="i ok" aria-hidden="true"><use href="#i-check"/></svg> Batch-4: ৳2,800</li><li><svg class="i ok" aria-hidden="true"><use href="#i-check"/></svg> Batch-5: ৳2,800</li></ul><div class="discount"><b>SSC A+</b><strong>Students Get</strong><b>10% Discount</b></div></div></article>
 </section>
-<section class="alt-bg" id="about"><div class="wrap"><div class="section-head"><span class="tag">About our institute</span><h2>Fabulous Academic And Admission Care</h2><p>সাভারে সরাসরি ক্লাসের মাধ্যমে HSC একাডেমিক শিক্ষা এবং বিশ্ববিদ্যালয় ও নার্সিং ভর্তি পরীক্ষার প্রস্তুতি দেওয়াই আমাদের লক্ষ্য।</p></div><div class="cards"><article class="card"><div class="icon">🎯</div><h3>Our Mission</h3><p>সহজবোধ্য পাঠদান, নিয়মিত অনুশীলন এবং পরিকল্পিত প্রস্তুতির মাধ্যমে শিক্ষার্থীদের আত্মবিশ্বাস বাড়ানো।</p></article><article class="card"><div class="icon">📚</div><h3>Academic Support</h3><p>HSC শিক্ষার্থীদের জন্য বিষয়ভিত্তিক পাঠদান, অনুশীলন ও নিয়মিত প্রস্তুতি।</p></article><article class="card"><div class="icon">🤝</div><h3>Student Guidance</h3><p>বিশ্ববিদ্যালয় ও নার্সিং ভর্তি প্রস্তুতির জন্য পরিকল্পিত দিকনির্দেশনা।</p></article></div></div></section>
+<section class="alt-bg" id="about"><div class="wrap"><div class="section-head"><span class="tag">About our institute</span><h2>Fabulous Academic And Admission Care</h2><p>সাভারে সরাসরি ক্লাসের মাধ্যমে HSC একাডেমিক শিক্ষা এবং বিশ্ববিদ্যালয় ও নার্সিং ভর্তি পরীক্ষার প্রস্তুতি দেওয়াই আমাদের লক্ষ্য।</p></div><div class="cards"><article class="card"><div class="icon"><svg class="i" aria-hidden="true"><use href="#i-target"/></svg></div><h3>Our Mission</h3><p>সহজবোধ্য পাঠদান, নিয়মিত অনুশীলন এবং পরিকল্পিত প্রস্তুতির মাধ্যমে শিক্ষার্থীদের আত্মবিশ্বাস বাড়ানো।</p></article><article class="card"><div class="icon"><svg class="i" aria-hidden="true"><use href="#i-books"/></svg></div><h3>Academic Support</h3><p>HSC শিক্ষার্থীদের জন্য বিষয়ভিত্তিক পাঠদান, অনুশীলন ও নিয়মিত প্রস্তুতি।</p></article><article class="card"><div class="icon"><svg class="i" aria-hidden="true"><use href="#i-usercheck"/></svg></div><h3>Student Guidance</h3><p>বিশ্ববিদ্যালয় ও নার্সিং ভর্তি প্রস্তুতির জন্য পরিকল্পিত দিকনির্দেশনা।</p></article></div></div></section>
 
 <section class="fa-courses" id="courses" aria-labelledby="fa-courses-title">
   <div class="fa-wrap">
@@ -346,6 +553,77 @@ section{scroll-margin-top:112px}.feature-strip{scroll-margin-top:112px}
     <div class="varsity-bottom"><span>আপনার লক্ষ্যের পথে সঠিক প্রস্তুতি শুরু করুন।</span><a class="btn" href="#admission">Admission Enquiry →</a></div>
   </div>
 </section>
+<section class="alt-bg" id="routine"><div class="wrap">
+<div class="section-head"><span class="tag">Class routine</span><h2>ক্লাস রুটিন</h2><p>আপনার ব্যাচটি বেছে নিন, দিন ও সময় এক নজরে দেখুন।</p></div>
+<div id="rtWrap">
+<div class="rt-tabs" role="tablist" aria-label="ব্যাচ নির্বাচন"><button class="rt-tab" role="tab" type="button" id="rt-tab-h27s" aria-controls="rt-h27s" aria-selected="false">HSC 27 Science</button><button class="rt-tab" role="tab" type="button" id="rt-tab-h27a" aria-controls="rt-h27a" aria-selected="false">HSC 27 Arts & BS</button><button class="rt-tab" role="tab" type="button" id="rt-tab-h28s" aria-controls="rt-h28s" aria-selected="false">HSC 28 Science</button><button class="rt-tab" role="tab" type="button" id="rt-tab-h28a" aria-controls="rt-h28a" aria-selected="false">HSC 28 Arts & BS</button></div>
+<!-- রুটিন বদলাতে চাইলে নিচের টেবিলের ঘরের লেখা সরাসরি বদলান। কোনো ঘর ফাঁকা রাখলে সেই সময়ে ক্লাস দেখাবে না। -->
+<div class="routine-wrap">
+<div class="rt-panel" id="rt-h27s" role="tabpanel" aria-labelledby="rt-tab-h27s">
+<h3 class="rt-title">HSC 27 Science</h3>
+<div class="routine-scroll">
+<table class="rtt"><caption>HSC 27 Science ক্লাস রুটিন</caption>
+<thead><tr><th>বার</th><th>৩.৩০–৪.৩০</th><th>৪.৩০–৫.৩০</th><th>৫.৩০–৬.৩০</th></tr></thead>
+<tbody>
+<tr><th scope="row">শনিবার</th><td data-label="৩.৩০–৪.৩০">উচ্চতর গণিত</td><td data-label="৪.৩০–৫.৩০">বাংলা</td><td data-label="৫.৩০–৬.৩০">আইসিটি</td></tr>
+<tr><th scope="row">রবিবার</th><td data-label="৩.৩০–৪.৩০">E1</td><td data-label="৪.৩০–৫.৩০">রসায়ন</td><td data-label="৫.৩০–৬.৩০">উচ্চতর গণিত</td></tr>
+<tr><th scope="row">সোমবার</th><td data-label="৩.৩০–৪.৩০"></td><td data-label="৪.৩০–৫.৩০">E2</td><td data-label="৫.৩০–৬.৩০">জীব</td></tr>
+<tr><th scope="row">মঙ্গলবার</th><td data-label="৩.৩০–৪.৩০"></td><td data-label="৪.৩০–৫.৩০">আইসিটি</td><td data-label="৫.৩০–৬.৩০">জীব</td></tr>
+<tr><th scope="row">বুধবার</th><td data-label="৩.৩০–৪.৩০">রসায়ন</td><td data-label="৪.৩০–৫.৩০">E2</td><td data-label="৫.৩০–৬.৩০"></td></tr>
+<tr><th scope="row">বৃহস্পতিবার</th><td class="alt" data-label="৩.০০–৪.৩০"><span class="alt-time">৩.০০–৪.৩০</span>পদার্থ</td><td data-label="৪.৩০–৫.৩০">উচ্চতর গণিত</td><td data-label="৫.৩০–৬.৩০"></td></tr>
+<tr><th scope="row">শুক্রবার</th><td class="alt" data-label="৯.০০–১০.০০"><span class="alt-time">৯.০০–১০.০০</span>রসায়ন</td><td class="alt" data-label="১০.০০–১১.০০"><span class="alt-time">১০.০০–১১.০০</span>পদার্থ</td><td class="alt" data-label="১১.০০–১২.০০"><span class="alt-time">১১.০০–১২.০০</span>আইসিটি</td></tr>
+</tbody></table>
+</div></div>
+<div class="rt-panel" id="rt-h27a" role="tabpanel" aria-labelledby="rt-tab-h27a">
+<h3 class="rt-title">HSC 27 Arts & BS</h3>
+<div class="routine-scroll">
+<table class="rtt"><caption>HSC 27 Arts & BS ক্লাস রুটিন</caption>
+<thead><tr><th>বার</th><th>৩.৩০–৪.৩০</th><th>৪.৩০–৫.৩০</th><th>৫.৩০–৬.৩০</th></tr></thead>
+<tbody>
+<tr><th scope="row">শনিবার</th><td data-label="৩.৩০–৪.৩০">অর্থনীতি</td><td data-label="৪.৩০–৫.৩০">বাংলা</td><td data-label="৫.৩০–৬.৩০">ICT</td></tr>
+<tr><th scope="row">রবিবার</th><td data-label="৩.৩০–৪.৩০">English 1st</td><td data-label="৪.৩০–৫.৩০">অর্থনীতি</td><td data-label="৫.৩০–৬.৩০"></td></tr>
+<tr><th scope="row">সোমবার</th><td data-label="৩.৩০–৪.৩০">হিসাববিজ্ঞান</td><td data-label="৪.৩০–৫.৩০">English 2nd</td><td data-label="৫.৩০–৬.৩০"></td></tr>
+<tr><th scope="row">মঙ্গলবার</th><td data-label="৩.৩০–৪.৩০">হিসাববিজ্ঞান</td><td data-label="৪.৩০–৫.৩০">ICT</td><td data-label="৫.৩০–৬.৩০"></td></tr>
+<tr><th scope="row">বুধবার</th><td data-label="৩.৩০–৪.৩০">হিসাববিজ্ঞান</td><td data-label="৪.৩০–৫.৩০">English 2nd</td><td data-label="৫.৩০–৬.৩০"></td></tr>
+<tr><th scope="row">বৃহস্পতিবার</th><td class="off" data-label="৩.৩০–৪.৩০">×</td><td class="off" data-label="৪.৩০–৫.৩০">×</td><td data-label="৫.৩০–৬.৩০"></td></tr>
+<tr><th scope="row">শুক্রবার</th><td data-label="৩.৩০–৪.৩০"></td><td class="alt" data-label="১০.০০–১১.০০"><span class="alt-time">১০.০০–১১.০০</span>অর্থনীতি</td><td class="alt" data-label="১১.০০–১২.০০"><span class="alt-time">১১.০০–১২.০০</span>ICT</td></tr>
+</tbody></table>
+</div></div>
+<div class="rt-panel" id="rt-h28s" role="tabpanel" aria-labelledby="rt-tab-h28s">
+<h3 class="rt-title">HSC 28 Science</h3>
+<div class="routine-scroll">
+<table class="rtt"><caption>HSC 28 Science ক্লাস রুটিন</caption>
+<thead><tr><th>বার</th><th>২.৩০–৩.৩০</th><th>৩.৩০–৪.৩০</th><th>৪.৩০–৫.৩০</th><th>৫.৩০–৬.৩০</th></tr></thead>
+<tbody>
+<tr><th scope="row">শনিবার</th><td data-label="২.৩০–৩.৩০">আইসিটি</td><td data-label="৩.৩০–৪.৩০">বাংলা</td><td data-label="৪.৩০–৫.৩০">উচ্চতর গণিত</td><td data-label="৫.৩০–৬.৩০"></td></tr>
+<tr><th scope="row">রবিবার</th><td data-label="২.৩০–৩.৩০"></td><td data-label="৩.৩০–৪.৩০">রসায়ন</td><td data-label="৪.৩০–৫.৩০">উচ্চতর গণিত</td><td data-label="৫.৩০–৬.৩০">E2</td></tr>
+<tr><th scope="row">সোমবার</th><td data-label="২.৩০–৩.৩০"></td><td data-label="৩.৩০–৪.৩০">E1</td><td data-label="৪.৩০–৫.৩০">জীব</td><td data-label="৫.৩০–৬.৩০"></td></tr>
+<tr><th scope="row">মঙ্গলবার</th><td data-label="২.৩০–৩.৩০"></td><td data-label="৩.৩০–৪.৩০">জীব</td><td data-label="৪.৩০–৫.৩০">আইসিটি</td><td data-label="৫.৩০–৬.৩০"></td></tr>
+<tr><th scope="row">বুধবার</th><td data-label="২.৩০–৩.৩০"></td><td data-label="৩.৩০–৪.৩০">E1</td><td data-label="৪.৩০–৫.৩০">রসায়ন</td><td data-label="৫.৩০–৬.৩০"></td></tr>
+<tr><th scope="row">বৃহস্পতিবার</th><td data-label="২.৩০–৩.৩০"></td><td data-label="৩.৩০–৪.৩০">উচ্চতর গণিত</td><td class="alt" data-label="৪.৩০–৬.০০"><span class="alt-time">৪.৩০–৬.০০</span>পদার্থ</td><td data-label="৫.৩০–৬.৩০"></td></tr>
+<tr><th scope="row">শুক্রবার</th><td data-label="২.৩০–৩.৩০"></td><td class="alt" data-label="৯.০০–১০.০০"><span class="alt-time">৯.০০–১০.০০</span>জীব</td><td class="alt" data-label="১০.০০–১১.০০"><span class="alt-time">১০.০০–১১.০০</span>রসায়ন</td><td class="alt" data-label="১১.০০–১২.০০"><span class="alt-time">১১.০০–১২.০০</span>পদার্থ</td></tr>
+</tbody></table>
+</div></div>
+<div class="rt-panel" id="rt-h28a" role="tabpanel" aria-labelledby="rt-tab-h28a">
+<h3 class="rt-title">HSC 28 Arts & BS</h3>
+<div class="routine-scroll">
+<table class="rtt"><caption>HSC 28 Arts & BS ক্লাস রুটিন</caption>
+<thead><tr><th>বার</th><th>২.৩০–৩.৩০</th><th>৩.৩০–৪.৩০</th><th>৪.৩০–৫.৩০</th></tr></thead>
+<tbody>
+<tr><th scope="row">শনিবার</th><td data-label="২.৩০–৩.৩০">আইসিটি</td><td data-label="৩.৩০–৪.৩০">বাংলা</td><td data-label="৪.৩০–৫.৩০">English 1st</td></tr>
+<tr><th scope="row">রবিবার</th><td data-label="২.৩০–৩.৩০"></td><td class="off" data-label="৩.৩০–৪.৩০">×</td><td class="off" data-label="৪.৩০–৫.৩০">×</td></tr>
+<tr><th scope="row">সোমবার</th><td data-label="২.৩০–৩.৩০"></td><td data-label="৩.৩০–৪.৩০">আইসিটি</td><td data-label="৪.৩০–৫.৩০"></td></tr>
+<tr><th scope="row">মঙ্গলবার</th><td data-label="২.৩০–৩.৩০"></td><td data-label="৩.৩০–৪.৩০">English 1st</td><td data-label="৪.৩০–৫.৩০"></td></tr>
+<tr><th scope="row">বুধবার</th><td data-label="২.৩০–৩.৩০"></td><td class="off" data-label="৩.৩০–৪.৩০">×</td><td class="off" data-label="৪.৩০–৫.৩০">×</td></tr>
+<tr><th scope="row">বৃহস্পতিবার</th><td data-label="২.৩০–৩.৩০"></td><td data-label="৩.৩০–৪.৩০">English 2nd</td><td data-label="৪.৩০–৫.৩০"></td></tr>
+<tr><th scope="row">শুক্রবার</th><td data-label="২.৩০–৩.৩০"></td><td class="alt" data-label="১০.০০–১১.০০"><span class="alt-time">১০.০০–১১.০০</span>আইসিটি</td><td data-label="৪.৩০–৫.৩০"></td></tr>
+</tbody></table>
+</div></div>
+</div>
+</div>
+<p class="rt-legend"><span><i></i>হলুদ ঘর = আলাদা সময়ের ক্লাস</span><span>× = ক্লাস নেই</span><span>E1 / E2 = English 1st / 2nd Paper</span></p>
+<p class="routine-note">রুটিন পরিবর্তন হতে পারে। সঠিক সময় নিশ্চিত হতে ফোন বা <a href="https://wa.me/8801352205074" target="_blank" rel="noopener">WhatsApp</a> করুন।</p>
+</div></section>
   <section id="students">
 <div class="wrap">
 <div class="section-head">
@@ -366,15 +644,15 @@ section{scroll-margin-top:112px}.feature-strip{scroll-margin-top:112px}
 </section>
 <section id="teachers"><div class="wrap"><div class="section-head"><span class="tag">Meet our team</span><h2>Our Expert Faculty</h2><p>অভিজ্ঞ ও দক্ষ শিক্ষকমণ্ডলীর তত্ত্বাবধানে মানসম্মত পাঠদান।</p></div>
 <div class="faculty-leaders">
-<article class="teacher-card leader-card"><div class="teacher-photo"><img src="assets/rakib-hasan.jpg" alt="Rakib Hasan"></div><div class="teacher-info"><h3>Rakib Hasan</h3><span class="role">Chairman</span><div class="detail"><b>Teaching Subject:</b> English</div><div class="detail"><b>Academic Background:</b> MA in English, MBSTU</div><span class="experience">★ 5 Years Experience</span></div></article>
-<article class="teacher-card leader-card"><div class="teacher-photo"><img src="assets/nirob-mahmud.jpg" alt="Nirob Mahmud"></div><div class="teacher-info"><h3>Nirob Mahmud</h3><span class="role">Director</span><div class="detail"><b>Teaching Subject:</b> English</div><div class="detail"><b>Academic Background:</b> MA in English, Islamic University</div><span class="experience">★ 5 Years Experience</span></div></article>
+<article class="teacher-card leader-card"><div class="teacher-photo"><img src="assets/rakib-hasan.jpg" alt="Rakib Hasan"></div><div class="teacher-info"><h3>Rakib Hasan</h3><span class="role">Chairman</span><div class="detail"><b>Teaching Subject:</b> English</div><div class="detail"><b>Academic Background:</b> MA in English, MBSTU</div><span class="experience"><svg class="i" aria-hidden="true"><use href="#i-star"/></svg> 5 Years Experience</span></div></article>
+<article class="teacher-card leader-card"><div class="teacher-photo"><img src="assets/nirob-mahmud.jpg" alt="Nirob Mahmud"></div><div class="teacher-info"><h3>Nirob Mahmud</h3><span class="role">Director</span><div class="detail"><b>Teaching Subject:</b> English</div><div class="detail"><b>Academic Background:</b> MA in English, Islamic University</div><span class="experience"><svg class="i" aria-hidden="true"><use href="#i-star"/></svg> 5 Years Experience</span></div></article>
 </div>
 <div class="faculty-grid">
-<article class="teacher-card"><div class="teacher-photo"><img src="assets/abid-hasan.jpg" alt="Mohammad Abid Hasan"></div><div class="teacher-info"><h3>Mohammad Abid Hasan</h3><span class="role">Senior Teacher</span><div class="detail"><b>Teaching Subject:</b> Physics</div><div class="detail"><b>Academic Background:</b> MME, BUET</div><span class="experience">★ 4 Years Experience</span></div></article>
-<article class="teacher-card"><div class="teacher-photo"><img src="assets/ataur-sagor.png" alt="Ataur Rahman Sagor"></div><div class="teacher-info"><h3>Ataur Rahman Sagor</h3><span class="role">Senior Teacher</span><div class="detail"><b>Teaching Subject:</b> Chemistry</div><div class="detail"><b>Academic Background:</b> Chemistry, Jahangirnagar University</div><span class="experience">★ 4 Years Experience</span></div></article>
-<article class="teacher-card"><div class="teacher-photo"><img src="assets/nabil.jpg" alt="Mohammad Nahian Ferdoes Nabil"></div><div class="teacher-info"><h3>Mohammad Nahian Ferdoes Nabil</h3><span class="role">Teacher</span><div class="detail"><b>Teaching Subject:</b> Mathematics</div><div class="detail"><b>Academic Background:</b> Biochemistry &amp; Molecular Biology, Jagannath University</div><span class="experience">★ 3 Years Experience</span></div></article>
-<article class="teacher-card"><div class="teacher-photo"><img src="assets/mehedi-hasan.jpg" alt="Mehedi Hasan"></div><div class="teacher-info"><h3>Mehedi Hasan</h3><span class="role">Teacher</span><div class="detail"><b>Teaching Subject:</b> Biology &amp; ICT</div><div class="detail"><b>Academic Background:</b> Pharmacy Student, University of Asia Pacific</div><span class="experience">★ 2.5 Years Experience</span></div></article>
-<article class="teacher-card"><div class="teacher-photo"><img src="assets/afrin-mou.png" alt="Afrin Akter Mou"></div><div class="teacher-info"><h3>Afrin Akter Mou</h3><span class="role">Teacher</span><div class="detail"><b>Teaching Subject:</b> Economics</div><div class="detail"><b>Academic Background:</b> Public Administration, University of Dhaka</div><span class="experience">★ 1 Year Experience</span></div></article>
+<article class="teacher-card"><div class="teacher-photo"><img src="assets/abid-hasan.jpg" alt="Mohammad Abid Hasan"></div><div class="teacher-info"><h3>Mohammad Abid Hasan</h3><span class="role">Senior Teacher</span><div class="detail"><b>Teaching Subject:</b> Physics</div><div class="detail"><b>Academic Background:</b> MME, BUET</div><span class="experience"><svg class="i" aria-hidden="true"><use href="#i-star"/></svg> 4 Years Experience</span></div></article>
+<article class="teacher-card"><div class="teacher-photo"><img src="assets/ataur-sagor.png" alt="Ataur Rahman Sagor"></div><div class="teacher-info"><h3>Ataur Rahman Sagor</h3><span class="role">Senior Teacher</span><div class="detail"><b>Teaching Subject:</b> Chemistry</div><div class="detail"><b>Academic Background:</b> Chemistry, Jahangirnagar University</div><span class="experience"><svg class="i" aria-hidden="true"><use href="#i-star"/></svg> 4 Years Experience</span></div></article>
+<article class="teacher-card"><div class="teacher-photo"><img src="assets/nabil.jpg" alt="Mohammad Nahian Ferdoes Nabil"></div><div class="teacher-info"><h3>Mohammad Nahian Ferdoes Nabil</h3><span class="role">Teacher</span><div class="detail"><b>Teaching Subject:</b> Mathematics</div><div class="detail"><b>Academic Background:</b> Biochemistry &amp; Molecular Biology, Jagannath University</div><span class="experience"><svg class="i" aria-hidden="true"><use href="#i-star"/></svg> 3 Years Experience</span></div></article>
+<article class="teacher-card"><div class="teacher-photo"><img src="assets/mehedi-hasan.jpg" alt="Mehedi Hasan"></div><div class="teacher-info"><h3>Mehedi Hasan</h3><span class="role">Teacher</span><div class="detail"><b>Teaching Subject:</b> Biology &amp; ICT</div><div class="detail"><b>Academic Background:</b> Pharmacy Student, University of Asia Pacific</div><span class="experience"><svg class="i" aria-hidden="true"><use href="#i-star"/></svg> 2.5 Years Experience</span></div></article>
+<article class="teacher-card"><div class="teacher-photo"><img src="assets/afrin-mou.png" alt="Afrin Akter Mou"></div><div class="teacher-info"><h3>Afrin Akter Mou</h3><span class="role">Teacher</span><div class="detail"><b>Teaching Subject:</b> Economics</div><div class="detail"><b>Academic Background:</b> Public Administration, University of Dhaka</div><span class="experience"><svg class="i" aria-hidden="true"><use href="#i-star"/></svg> 1 Year Experience</span></div></article>
 <article class="teacher-card">
 <div class="teacher-photo">
 <img src="assets/umme-jannat.jpg.png" alt="Umme Jannat Usmita">
@@ -384,16 +662,338 @@ section{scroll-margin-top:112px}.feature-strip{scroll-margin-top:112px}
 <span class="role">Teacher</span>
 <div class="detail"><b>Teaching Subject:</b> Accounting</div>
 <div class="detail"><b>Academic Background:</b> Management, Dhaka Central University</div>
-<span class="experience">★ 1 Year Experience</span>
+<span class="experience"><svg class="i" aria-hidden="true"><use href="#i-star"/></svg> 1 Year Experience</span>
 </div>
 </article>
 </div></div></section>
 <section class="alt-bg" id="lessons"><div class="wrap"><div class="section-head"><span class="tag">Study corner</span><h2>English Grammar Lessons</h2><p>গুরুত্বপূর্ণ grammar topic-এর সংক্ষিপ্ত পরিচিতি।</p></div><div class="cards"><article class="card"><h3>Tense</h3><p>Present, Past ও Future—কাজের সময় বোঝায়।</p></article><article class="card"><h3>Articles</h3><p>A, An এবং The-এর ব্যবহার শিখুন।</p></article><article class="card"><h3>Preposition</h3><p>বাক্যে শব্দের পারস্পরিক সম্পর্ক প্রকাশ করে।</p></article></div></div></section>
-<section id="exam"><div class="wrap"><div class="section-head"><span class="tag">Test your knowledge</span><h2>Quick MCQ Practice</h2></div><div class="quiz-box"><p class="quiz-q">She ___ to college every day.</p><label class="option"><input type="radio" name="q" value="0"> go</label><label class="option"><input type="radio" name="q" value="1"> goes</label><label class="option"><input type="radio" name="q" value="2"> going</label><button class="btn" onclick="document.getElementById('quizResult').textContent=document.querySelector('input[name=q]:checked')?.value==='1'?'Correct!':'Try again.'">Check Answer</button><p class="feedback" id="quizResult"></p></div></div></section>
+<section id="exam"><div class="wrap"><div class="section-head"><span class="tag">Test your knowledge</span><h2>Right Form of Verbs — MCQ Practice</h2><p>১৫টি প্রশ্ন, প্রতিটির পর সঙ্গে সঙ্গে সঠিক উত্তর ও ব্যাখ্যা। শেষে আপনার স্কোর দেখুন।</p></div><div class="quiz-box quiz2" id="quiz" aria-live="polite"></div></div></section>
 <section class="alt-bg" id="notices"><div class="wrap"><div class="section-head"><span class="tag">Stay informed</span><h2>Latest Notices</h2><p>প্রতিষ্ঠানের গুরুত্বপূর্ণ ঘোষণা এখানে প্রকাশিত হবে।</p></div><div class="notice"><div class="notice-date">INFO</div><div><b>Welcome to Fabulous Academic And Admission Care</b><p>নতুন ক্লাস রুটিন ও পরীক্ষার নোটিশ এখানে যুক্ত করা হবে।</p></div></div></div></section>
 <section id="notes"><div class="wrap"><div class="section-head"><span class="tag">Study materials</span><h2>PDF Notes &amp; Resources</h2><p>শিক্ষা উপকরণ শিগগিরই যুক্ত করা হবে।</p></div><div class="pdf-row"><div><b>English Grammar Notes</b><small>PDF resource</small></div><span>Coming soon</span></div><div class="pdf-row"><div><b>HSC Practice Sheet</b><small>PDF resource</small></div><span>Coming soon</span></div></div></section>
-<section class="alt-bg" id="admission"><div class="wrap"><div class="section-head"><span class="tag">Join our learning community</span><h2>Student Admission</h2><p>ভর্তির বিস্তারিত জানতে যোগাযোগ করুন।</p></div><div class="quiz-box"><p>ভর্তির জন্য ফোন করুন অথবা WhatsApp-এ যোগাযোগ করুন।</p><a class="btn" href="tel:01352205074">Call 01352205074</a><a class="btn alt" href="https://wa.me/8801352205074">WhatsApp</a></div></div></section>
-<section id="contact"><div class="wrap"><div class="section-head"><span class="tag">Get in touch</span><h2>Contact Fabulous Academic</h2></div><div class="cards"><article class="card"><div class="icon">📞</div><h3>Call Us</h3><p>সরাসরি ফোন করে বিস্তারিত জানুন।</p><a class="btn" href="tel:01352205074">01352205074</a></article><article class="card"><div class="icon">📍</div><h3>Visit Us</h3><p>C-72/5, Birulia Road, Savar, Dhaka</p><a href="https://www.google.com/maps/search/?api=1&query=C-72%2F5%2C%20Birulia%20Road%2C%20Savar%2C%20Dhaka">View on Google Maps →</a></article><article class="card"><div class="icon">📘</div><h3>Facebook Page</h3><p>আপডেট ও যোগাযোগের জন্য আমাদের Facebook Page-এ আসুন।</p><a class="btn" href="https://www.facebook.com/share/19ZHBdpRdJ/" target="_blank" rel="noopener">Visit Facebook Page</a></article></div></div></section>
-</main><footer><div class="wrap"><div class="foot"><div><h3>Fabulous Academic<br>And Admission Care</h3><p>Learn with clarity.<br>Prepare with confidence.</p></div><div><h3>Quick Links</h3><p><a href="#about">About Us</a><br><a href="#teachers">Our Teachers</a><br><a href="#varsity">Admission Preparation</a><br><a href="#lessons">Grammar Lessons</a><br><a href="#contact">Contact</a></p></div><div><h3>Contact</h3><p>C-72/5, Birulia Road,<br>Savar, Dhaka<br><a href="tel:01352205074">01352205074</a></p></div></div><div class="copyright">© <span id="year"></span> Fabulous Academic And Admission Care. All rights reserved.</div></div></footer>
+<section class="alt-bg" id="admission"><div class="wrap"><div class="section-head"><span class="tag">Join our learning community</span><h2>Student Admission</h2><p>ফর্মটি পূরণ করে সরাসরি আমাদের WhatsApp-এ পাঠান, অথবা ফোন করুন।</p></div>
+<div class="adm-grid">
+<form class="card adm-form" id="admForm" novalidate>
+<h3>ভর্তি ফর্ম</h3>
+<p class="sub">নিচের তথ্য দিন। বাটনে চাপ দিলে WhatsApp খুলবে এবং আপনার তথ্যসহ মেসেজ তৈরি থাকবে — শুধু Send চাপুন।</p>
+<div class="form-grid">
+<div class="field"><label for="f-name">শিক্ষার্থীর নাম <span class="req">*</span></label><input id="f-name" name="name" type="text" autocomplete="name" placeholder="আপনার পূর্ণ নাম" required></div>
+<div class="field"><label for="f-phone">মোবাইল নম্বর <span class="req">*</span></label><input id="f-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="01XXXXXXXXX" required></div>
+<div class="field"><label for="f-class">শ্রেণি / কোর্স <span class="req">*</span></label><select id="f-class" name="class" required><option value="">নির্বাচন করুন</option><option>একাদশ শ্রেণি</option><option>দ্বাদশ শ্রেণি</option><option>বিশ্ববিদ্যালয় ভর্তি প্রস্তুতি</option><option>নার্সিং ভর্তি প্রস্তুতি</option></select></div>
+<div class="field"><label for="f-group">বিভাগ</label><select id="f-group" name="group"><option>বিজ্ঞান</option><option>ব্যবসায় শিক্ষা</option><option>মানবিক</option><option>প্রযোজ্য নয়</option></select></div>
+<div class="field"><label for="f-batch">পছন্দের ব্যাচ</label><select id="f-batch" name="batch"><option>এখনো ঠিক করিনি</option><option>ব্যাচ-১</option><option>ব্যাচ-২</option><option>ব্যাচ-৩</option><option>ব্যাচ-৪</option><option>ব্যাচ-৫</option></select></div>
+<div class="field"><label>&nbsp;</label><label class="check"><input type="checkbox" id="f-aplus"><span>আমি SSC-তে A+ পেয়েছি <b>(১০% ছাড়)</b></span></label></div>
+<div class="field full"><label for="f-msg">কিছু জানাতে চাইলে লিখুন</label><textarea id="f-msg" name="message" placeholder="যেমন: কোন বিষয়ে বেশি সাহায্য লাগবে..."></textarea></div>
+<div class="field full"><label class="check"><input type="checkbox" id="f-free" checked><span>আমি ২ দিনের ফ্রি ক্লাসে আসতে চাই</span></label></div>
+</div>
+<p class="adm-err" id="admErr" role="alert"></p>
+<button class="btn adm-submit" type="submit"><svg class="i" aria-hidden="true"><use href="#i-send"/></svg> WhatsApp-এ পাঠান</button>
+<p class="form-note" id="admOk" role="status"></p>
+</form>
+<aside class="adm-side">
+<div class="perk gold"><span class="icon"><svg class="i" aria-hidden="true"><use href="#i-gift"/></svg></span><div><b>২ দিন ফ্রি ক্লাস</b><p>ক্লাস করে দেখুন, পছন্দ হলে তারপর ভর্তি হন।</p></div></div>
+<div class="perk"><span class="icon"><svg class="i" aria-hidden="true"><use href="#i-percent"/></svg></span><div><b>SSC A+ হলে ১০% ছাড়</b><p>মাসিক টিউশন ফিতে ছাড় পাবেন।</p></div></div>
+<div class="perk"><span class="icon"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg></span><div><b>সরাসরি ক্লাস, সাভার</b><p>C-72/5, Birulia Road, Savar, Dhaka</p></div></div>
+<div class="adm-contact"><a class="btn" href="tel:01352205074"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg> Call 01352205074</a><a class="btn alt" href="https://wa.me/8801352205074" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg> WhatsApp</a></div>
+</aside>
+</div></div></section>
+<section id="faq"><div class="wrap"><div class="section-head"><span class="tag">FAQ</span><h2>সাধারণ জিজ্ঞাসা</h2><p>ভর্তি ও ক্লাস নিয়ে যেসব প্রশ্ন সবচেয়ে বেশি আসে।</p></div>
+<div class="faq">
+<details class="faq-item"><summary>২ দিন ফ্রি ক্লাস কীভাবে করব?<span><svg class="i" aria-hidden="true"><use href="#i-down"/></svg></span></summary><p>ভর্তি ফর্মে "ফ্রি ক্লাসে আসতে চাই" টিক দিয়ে পাঠান, অথবা ফোন/WhatsApp-এ জানান। ২ দিন ক্লাস করে দেখুন, পছন্দ হলে তারপর ভর্তি হবেন।</p></details>
+<details class="faq-item"><summary>SSC-তে A+ পেলে কি ছাড় পাওয়া যায়?<span><svg class="i" aria-hidden="true"><use href="#i-down"/></svg></span></summary><p>হ্যাঁ, SSC-তে A+ পেলে মাসিক টিউশন ফিতে ১০% ছাড় রয়েছে। ফি-এর অংশে "আমি SSC-তে A+ পেয়েছি" টিক দিলে ছাড়ের পর ফি দেখতে পাবেন।</p></details>
+<details class="faq-item"><summary>কোন কোন বিভাগের জন্য ক্লাস আছে?<span><svg class="i" aria-hidden="true"><use href="#i-down"/></svg></span></summary><p>একাদশ ও দ্বাদশ শ্রেণির বিজ্ঞান, ব্যবসায় শিক্ষা ও মানবিক বিভাগের জন্য HSC ব্যাচ চলছে।</p></details>
+<details class="faq-item"><summary>ক্লাস কি অনলাইনে, নাকি সরাসরি?<span><svg class="i" aria-hidden="true"><use href="#i-down"/></svg></span></summary><p>আমাদের ক্লাস সরাসরি (অফলাইনে), সাভারের বিরুলিয়া রোডে।</p></details>
+<details class="faq-item"><summary>আমার জন্য কোন ব্যাচ ঠিক হবে?<span><svg class="i" aria-hidden="true"><use href="#i-down"/></svg></span></summary><p>ব্যাচ অনুযায়ী বিষয় ও মাসিক ফি ওপরের "HSC ব্যাচ ও মাসিক টিউশন ফি" অংশে দেওয়া আছে। নিশ্চিত না হলে ফোন বা WhatsApp করুন, আমরা আপনার বিভাগ অনুযায়ী ঠিক করে দেব।</p></details>
+<details class="faq-item"><summary>কোন কোন ভর্তি পরীক্ষার প্রস্তুতি হয়?<span><svg class="i" aria-hidden="true"><use href="#i-down"/></svg></span></summary><p>ঢাকা বিশ্ববিদ্যালয় (DU), জাহাঙ্গীরনগর বিশ্ববিদ্যালয় (JU), গুচ্ছ ভর্তি, রাজশাহী বিশ্ববিদ্যালয় (RU), চট্টগ্রাম বিশ্ববিদ্যালয় (CU) এবং নার্সিং ভর্তি প্রস্তুতি।</p></details>
+<details class="faq-item"><summary>ক্লাসের সময় কখন?<span><svg class="i" aria-hidden="true"><use href="#i-down"/></svg></span></summary><p>ব্যাচ অনুযায়ী ক্লাসের দিন ও সময় <a href="#routine">ক্লাস রুটিন</a> অংশে দেখুন, অথবা ফোন করে জেনে নিন।</p></details>
+<details class="faq-item"><summary>প্রতিষ্ঠান কোথায়?<span><svg class="i" aria-hidden="true"><use href="#i-down"/></svg></span></summary><p>C-72/5, Birulia Road, Savar, Dhaka। নিচে মানচিত্রও দেওয়া আছে।</p></details>
+</div></div></section>
+
+<section id="contact"><div class="wrap"><div class="section-head"><span class="tag">Get in touch</span><h2>Contact Fabulous Academic</h2></div><div class="cards"><article class="card"><div class="icon"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg></div><h3>Call Us</h3><p>সরাসরি ফোন করে বিস্তারিত জানুন।</p><a class="btn" href="tel:01352205074">01352205074</a></article><article class="card"><div class="icon"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg></div><h3>Visit Us</h3><p>C-72/5, Birulia Road, Savar, Dhaka</p><a href="https://www.google.com/maps/search/?api=1&query=C-72%2F5%2C%20Birulia%20Road%2C%20Savar%2C%20Dhaka">View on Google Maps →</a></article><article class="card"><div class="icon"><svg class="i" aria-hidden="true"><use href="#i-fb"/></svg></div><h3>Facebook Page</h3><p>আপডেট ও যোগাযোগের জন্য আমাদের Facebook Page-এ আসুন।</p><a class="btn" href="https://www.facebook.com/share/19ZHBdpRdJ/" target="_blank" rel="noopener">Visit Facebook Page</a></article></div>
+<div class="contact-extra">
+<div class="map-frame"><iframe title="Fabulous Academic And Admission Care — Google Map" src="https://www.google.com/maps?q=C-72%2F5%2C%20Birulia%20Road%2C%20Savar%2C%20Dhaka&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+<div class="card time-card"><div class="icon"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg></div><h3>ক্লাসের সময়</h3><p>ব্যাচ অনুযায়ী ক্লাসের দিন ও সময় রুটিন অংশে দেওয়া আছে। ফ্রি ক্লাসে আসার আগে ফোন করে জেনে নিন।</p><a class="btn" href="#routine">ক্লাস রুটিন দেখুন</a><a class="btn alt" href="https://www.google.com/maps/dir/?api=1&amp;destination=C-72%2F5%2C%20Birulia%20Road%2C%20Savar%2C%20Dhaka" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-nav"/></svg> Get Directions</a></div>
+</div></div></section>
+</main><footer><div class="wrap"><div class="foot"><div><h3>Fabulous Academic<br>And Admission Care</h3><p>Learn with clarity.<br>Prepare with confidence.</p></div><div><h3>Quick Links</h3><p><a href="#about">About Us</a><br><a href="#teachers">Our Teachers</a><br><a href="#varsity">Admission Preparation</a><br><a href="#routine">Class Routine</a><br><a href="#lessons">Grammar Lessons</a><br><a href="#faq">FAQ</a><br><a href="#contact">Contact</a></p></div><div><h3>Contact</h3><p>C-72/5, Birulia Road,<br>Savar, Dhaka<br><a href="tel:01352205074">01352205074</a></p></div></div><div class="copyright">© <span id="year"></span> Fabulous Academic And Admission Care. All rights reserved.</div></div></footer>
 <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+<div class="sticky-cta" role="navigation" aria-label="Quick contact"><a class="sc-call" href="tel:01352205074"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg> কল করুন</a><a class="sc-wa" href="https://wa.me/8801352205074?text=%E0%A6%86%E0%A6%B8%E0%A6%B8%E0%A6%BE%E0%A6%B2%E0%A6%BE%E0%A6%AE%E0%A7%81%20%E0%A6%86%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%95%E0%A7%81%E0%A6%AE%2C%20%E0%A6%86%E0%A6%AE%E0%A6%BF%20Fabulous%20Academic%20%E0%A6%B8%E0%A6%AE%E0%A7%8D%E0%A6%AA%E0%A6%B0%E0%A7%8D%E0%A6%95%E0%A7%87%20%E0%A6%9C%E0%A6%BE%E0%A6%A8%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg> WhatsApp</a></div>
+<script>
+/* ===== Premium upgrade v2 scripts ===== */
+(function () {
+  'use strict';
+
+  var WA_NUMBER = '8801352205074';
+  /* Optional: paste a Google Apps Script "web app" URL here to ALSO save every admission form into a Google Sheet. */
+  var SHEET_URL = '';
+
+  var BN = '০১২৩৪৫৬৭৮৯';
+  function bn(s) { return String(s).replace(/\d/g, function (d) { return BN.charAt(d); }); }
+  function el(tag, cls, txt) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (txt != null) n.textContent = txt;
+    return n;
+  }
+  function shuffle(a) {
+    a = a.slice();
+    for (var i = a.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = a[i]; a[i] = a[j]; a[j] = t;
+    }
+    return a;
+  }
+
+  /* ---------- close mobile menu after tapping a link ---------- */
+  var navBox = document.getElementById('nav');
+  if (navBox) {
+    [].forEach.call(navBox.querySelectorAll('nav a'), function (a) {
+      a.addEventListener('click', function () { navBox.classList.remove('open'); });
+    });
+  }
+
+  /* ---------- routine batch tabs ---------- */
+  var rtWrap = document.getElementById('rtWrap');
+  if (rtWrap) {
+    rtWrap.classList.add('js-tabs');
+    var rtTabs = [].slice.call(rtWrap.querySelectorAll('.rt-tab'));
+    var rtPanels = [].slice.call(rtWrap.querySelectorAll('.rt-panel'));
+    var rtSelect = function (i, focus) {
+      rtTabs.forEach(function (t, k) {
+        var on = k === i;
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.tabIndex = on ? 0 : -1;
+        rtPanels[k].hidden = !on;
+        if (on && focus) t.focus();
+      });
+    };
+    rtTabs.forEach(function (t, i) {
+      t.addEventListener('click', function () { rtSelect(i); });
+      t.addEventListener('keydown', function (e) {
+        var n = null;
+        if (e.key === 'ArrowRight') n = (i + 1) % rtTabs.length;
+        else if (e.key === 'ArrowLeft') n = (i - 1 + rtTabs.length) % rtTabs.length;
+        if (n !== null) { e.preventDefault(); rtSelect(n, true); }
+      });
+    });
+    rtSelect(0);
+  }
+
+  /* ---------- Right Form of Verbs quiz ---------- */
+  var QUESTIONS = [
+    { q: 'She ___ to college every day.', o: ['go', 'goes', 'going', 'gone'], a: 'goes',
+      e: 'প্রতিদিনের অভ্যাস বোঝাতে Present Indefinite হয়। Subject She (3rd person singular) হলে verb-এর সাথে s/es বসে: goes।' },
+    { q: 'The sun ___ in the east.', o: ['rise', 'rises', 'rose', 'rising'], a: 'rises',
+      e: 'চিরন্তন সত্য সবসময় Present Indefinite-এ হয়। Subject singular, তাই rises।' },
+    { q: 'He ___ his homework before his mother came home.', o: ['finished', 'had finished', 'has finished', 'was finishing'], a: 'had finished',
+      e: 'অতীতের দুটি কাজের মধ্যে আগে ঘটা কাজে Past Perfect (had + V3) বসে।' },
+    { q: 'I ___ for you since morning.', o: ['wait', 'am waiting', 'have been waiting', 'waited'], a: 'have been waiting',
+      e: 'since দিয়ে শুরুর সময় বোঝায় এবং কাজটি এখনও চলছে, তাই Present Perfect Continuous: have been waiting।' },
+    { q: 'If I ___ a bird, I would fly to you.', o: ['am', 'was', 'were', 'be'], a: 'were',
+      e: 'কাল্পনিক শর্তে (If … would) If-এর পরে সব subject-এর সাথে were বসে।' },
+    { q: 'She suggested ___ to the doctor.', o: ['to go', 'going', 'go', 'went'], a: 'going',
+      e: 'suggest-এর পরে verb+ing (gerund) বসে: suggested going।' },
+    { q: 'By next year, he ___ his degree.', o: ['completes', 'will complete', 'will have completed', 'has completed'], a: 'will have completed',
+      e: 'ভবিষ্যতের কোনো নির্দিষ্ট সময়ের আগে কাজ সম্পন্ন হলে Future Perfect (will have + V3) বসে।' },
+    { q: 'She is used to ___ up early.', o: ['get', 'getting', 'got', 'gets'], a: 'getting',
+      e: 'be used to (অভ্যস্ত থাকা)-এর পরে verb+ing বসে: is used to getting up।' },
+    { q: 'I wish I ___ more time.', o: ['have', 'had', 'has', 'will have'], a: 'had',
+      e: 'I wish দিয়ে বর্তমানের অবাস্তব ইচ্ছা বোঝালে verb-এর Past form বসে: I wish I had।' },
+    { q: 'He was made ___ the room.', o: ['clean', 'to clean', 'cleaning', 'cleaned'], a: 'to clean',
+      e: 'Active-এ "made him clean" হয়, কিন্তু Passive-এ made-এর পরে to-infinitive বসে: was made to clean।' },
+    { q: 'Look! The baby ___.', o: ['cries', 'cried', 'is crying', 'has cried'], a: 'is crying',
+      e: 'Look! দিয়ে এখন ঘটছে এমন কাজ বোঝায়, তাই Present Continuous: is crying।' },
+    { q: 'The students ___ the exam when the bell rang.', o: ['took', 'were taking', 'have taken', 'take'], a: 'were taking',
+      e: 'অতীতে একটি কাজ চলাকালীন আরেকটি ঘটলে চলমান কাজে Past Continuous বসে: were taking।' },
+    { q: 'It is high time we ___ our preparation seriously.', o: ['begin', 'began', 'have begun', 'will begin'], a: 'began',
+      e: 'It is high time-এর পরে verb-এর Past form (V2) বসে: It is high time we began।' },
+    { q: 'He avoided ___ the question.', o: ['to answer', 'answer', 'answering', 'answered'], a: 'answering',
+      e: 'avoid-এর পরে verb+ing (gerund) বসে: avoided answering।' },
+    { q: 'The books ___ by him last year.', o: ['wrote', 'were written', 'are written', 'has written'], a: 'were written',
+      e: 'Passive voice এবং last year (অতীত) থাকায় were + V3 বসে: were written।' }
+  ];
+
+  var quizRoot = document.getElementById('quiz');
+  var qs;
+
+  function quizStart() {
+    qs = { list: shuffle(QUESTIONS), i: 0, score: 0, miss: [] };
+    quizShow();
+  }
+
+  function quizShow() {
+    var total = qs.list.length, cur = qs.list[qs.i];
+    quizRoot.textContent = '';
+
+    var top = el('div', 'qz-top');
+    top.appendChild(el('span', '', 'প্রশ্ন ' + bn(qs.i + 1) + ' / ' + bn(total)));
+    var bar = el('div', 'qz-bar'), fill = el('i');
+    bar.appendChild(fill); top.appendChild(bar);
+    top.appendChild(el('span', '', 'স্কোর: ' + bn(qs.score)));
+    quizRoot.appendChild(top);
+    fill.style.width = (qs.i / total * 100) + '%';
+
+    var parts = cur.q.split('___');
+    var q = el('p', 'qz-q');
+    q.appendChild(document.createTextNode(parts[0]));
+    var blank = el('span', 'qz-blank', ' ');
+    q.appendChild(blank);
+    q.appendChild(document.createTextNode(parts[1] || ''));
+    quizRoot.appendChild(q);
+
+    var opts = el('div', 'qz-opts');
+    var btns = [];
+    shuffle(cur.o).forEach(function (text, idx) {
+      var b = el('button', 'qz-opt');
+      b.type = 'button';
+      b.appendChild(el('span', 'ltr', 'ABCD'.charAt(idx)));
+      b.appendChild(el('span', '', text));
+      b.addEventListener('click', function () { pick(b, text); });
+      btns.push({ b: b, t: text });
+      opts.appendChild(b);
+    });
+    quizRoot.appendChild(opts);
+
+    function pick(chosen, text) {
+      var right = text === cur.a;
+      btns.forEach(function (x) {
+        x.b.disabled = true;
+        if (x.t === cur.a) x.b.classList.add('correct');
+      });
+      if (!right) chosen.classList.add('wrong');
+      if (right) qs.score++; else qs.miss.push({ q: cur.q, you: text, a: cur.a });
+      blank.textContent = cur.a;
+      fill.style.width = ((qs.i + 1) / total * 100) + '%';
+
+      var exp = el('div', 'qz-exp ' + (right ? 'ok' : 'bad'));
+      exp.setAttribute('role', 'status');
+      exp.appendChild(el('b', 'v', right ? 'সঠিক উত্তর!' : 'ভুল হয়েছে — সঠিক উত্তর: ' + cur.a));
+      exp.appendChild(document.createTextNode(cur.e));
+      quizRoot.appendChild(exp);
+
+      var act = el('div', 'qz-actions');
+      var last = qs.i + 1 >= total;
+      var next = el('button', 'btn', last ? 'ফলাফল দেখুন' : 'পরের প্রশ্ন');
+      next.type = 'button';
+      next.addEventListener('click', function () {
+        if (last) quizResult(); else { qs.i++; quizShow(); }
+      });
+      act.appendChild(next);
+      quizRoot.appendChild(act);
+      next.focus({ preventScroll: true });
+    }
+  }
+
+  function quizResult() {
+    var total = qs.list.length, pct = qs.score / total * 100;
+    quizRoot.textContent = '';
+    var box = el('div', 'qz-score');
+    var big = el('div', 'qz-big', bn(qs.score));
+    big.appendChild(el('small', '', ' / ' + bn(total)));
+    box.appendChild(big);
+    box.appendChild(el('p', 'qz-msg',
+      pct >= 85 ? 'চমৎকার! Verb-এর ব্যবহারে আপনি বেশ দক্ষ।' :
+      pct >= 60 ? 'ভালো হয়েছে! আরও একটু অনুশীলনে পুরো নম্বর সম্ভব।' :
+                  'আরও অনুশীলন দরকার। নিচের ভুলগুলো দেখে আবার চেষ্টা করুন।'));
+
+    if (qs.miss.length) {
+      var rev = el('div', 'qz-review');
+      rev.appendChild(el('h4', '', 'যেগুলো ভুল হয়েছিল'));
+      qs.miss.forEach(function (m) {
+        var d = el('div', 'qz-miss');
+        d.appendChild(document.createTextNode(m.q.replace('___', '____') + '  '));
+        var s = el('s', '', m.you); d.appendChild(s);
+        d.appendChild(document.createTextNode(' → '));
+        d.appendChild(el('b', '', m.a));
+        rev.appendChild(d);
+      });
+      box.appendChild(rev);
+    }
+
+    var end = el('div', 'qz-end');
+    var again = el('button', 'btn', 'আবার চেষ্টা করুন'); again.type = 'button';
+    again.addEventListener('click', quizStart);
+    var join = el('a', 'btn alt', 'ফ্রি ক্লাসে ভর্তি হতে চাই'); join.href = '#admission';
+    end.appendChild(again); end.appendChild(join);
+    box.appendChild(end);
+    quizRoot.appendChild(box);
+    quizRoot.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  if (quizRoot) quizStart();
+
+  /* ---------- admission form -> WhatsApp (+ optional Google Sheet) ---------- */
+  var form = document.getElementById('admForm');
+  if (form) {
+    var err = document.getElementById('admErr'), ok = document.getElementById('admOk');
+    var f = function (id) { return document.getElementById(id); };
+
+    form.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      err.textContent = ''; ok.textContent = '';
+      ['f-name', 'f-phone', 'f-class'].forEach(function (id) { f(id).classList.remove('bad'); });
+
+      var name = f('f-name').value.trim();
+      var phoneRaw = f('f-phone').value.replace(/[০-৯]/g, function (d) { return BN.indexOf(d); }).replace(/[\s\-]/g, '');
+      var cls = f('f-class').value;
+
+      if (!name) { f('f-name').classList.add('bad'); err.textContent = 'অনুগ্রহ করে নাম লিখুন।'; f('f-name').focus(); return; }
+      if (!/^(\+?88)?01[3-9]\d{8}$/.test(phoneRaw)) { f('f-phone').classList.add('bad'); err.textContent = 'সঠিক মোবাইল নম্বর দিন (যেমন: 01XXXXXXXXX)।'; f('f-phone').focus(); return; }
+      if (!cls) { f('f-class').classList.add('bad'); err.textContent = 'শ্রেণি / কোর্স নির্বাচন করুন।'; f('f-class').focus(); return; }
+
+      var data = {
+        name: name, phone: phoneRaw, course: cls,
+        group: f('f-group').value, batch: f('f-batch').value,
+        aplus: f('f-aplus').checked ? 'হ্যাঁ' : 'না',
+        freeClass: f('f-free').checked ? 'হ্যাঁ' : 'না',
+        message: f('f-msg').value.trim()
+      };
+
+      var lines = [
+        'আসসালামু আলাইকুম, আমি ভর্তি সম্পর্কে জানতে চাই।',
+        'নাম: ' + data.name,
+        'মোবাইল: ' + data.phone,
+        'শ্রেণি/কোর্স: ' + data.course,
+        'বিভাগ: ' + data.group,
+        'পছন্দের ব্যাচ: ' + data.batch,
+        'SSC A+: ' + data.aplus,
+        'ফ্রি ক্লাস: ' + data.freeClass
+      ];
+      if (data.message) lines.push('বার্তা: ' + data.message);
+
+      if (SHEET_URL) {
+        try {
+          fetch(SHEET_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain' }, body: JSON.stringify(data) });
+        } catch (e) { /* the WhatsApp message below still goes through */ }
+      }
+
+      var url = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(lines.join('\n'));
+      var w = window.open(url, '_blank', 'noopener');
+      if (!w) window.location.href = url;
+      ok.textContent = 'WhatsApp খুলছে… না খুললে পাশের WhatsApp বাটনে চাপ দিন।';
+    });
+  }
+
+  /* ---------- gentle scroll-reveal ---------- */
+  var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if ('IntersectionObserver' in window && !calm) {
+    var sel = '.section-head,.card,.teacher-card,.varsity-card,.student-photo,.fa-row,.snapshot-card,.feature-item,.notice,.pdf-row,.faq-item,.routine-wrap,.perk,.map-frame,.quiz2';
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        var n = en.target;
+        io.unobserve(n);
+        n.classList.add('in');
+        var wait = 900 + (parseFloat(n.style.transitionDelay) || 0) * 1000;
+        setTimeout(function () { n.classList.remove('reveal', 'in'); n.style.transitionDelay = ''; }, wait);
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+    [].forEach.call(document.querySelectorAll(sel), function (n) {
+      var pos = [].indexOf.call(n.parentNode.children, n);
+      n.style.transitionDelay = (Math.min(pos, 5) * 0.07) + 's';
+      n.classList.add('reveal');
+      io.observe(n);
+    });
+  }
+})();
+
+</script>
 </body></html>
